@@ -263,11 +263,9 @@ define(
       this.after('initialize', function () {
         that = this;
 
-        /*
         if (features.isEnabled('tags')) {
           this.on(events.mail.tags.update, this.updateTags);
         }
-        */
 
         this.on(document, events.mail.draftReply.want, this.wantDraftReplyForMail);
         this.on(document, events.mail.want, this.fetchSingle);

@@ -69,7 +69,7 @@ class TestPixelatedMail(unittest.TestCase):
 
         mail.mark_as_not_recent()
 
-        self.assertEquals(mail.fdoc.content['flags'], [])
+        self.assertEquals(mail.fdoc.content['flags'], ['this shouldn\'t be here'])
 
     def test_get_for_save_adds_from(self):
         InputMail.FROM_EMAIL_ADDRESS = 'me@pixelated.org'
